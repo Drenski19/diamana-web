@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimiana - DIY Microgreens Growing Kits | Varna, Bulgaria</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(76,175,80,0.9) 0%, rgba(139,195,74,0.9) 100%);
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .nav-link:hover::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #4CAF50;
+            margin-top: 2px;
+        }
+        .blog-card:hover .blog-image {
+            transform: scale(1.05);
+        }
+        .testimonial-card {
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(5px);
+        }
+        .floating-button {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-leaf text-3xl text-green-600 mr-2"></i>
+                <h1 class="text-2xl font-bold text-green-800">Dimiana</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-gray-700 hover:text-green-600 font-medium">Home</a>
+                <a href="#products" class="nav-link text-gray-700 hover:text-green-600 font-medium">Products</a>
+                <a href="#benefits" class="nav-link text-gray-700 hover:text-green-600 font-medium">Benefits</a>
+                <a href="#blog" class="nav-link text-gray-700 hover:text-green-600 font-medium">Blog</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-green-600 font-medium">About Us</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-gray-700 hover:text-green-600"><i class="fas fa-shopping-cart"></i></a>
+                <button class="md:hidden text-gray-700" id="menu-toggle">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white w-full py-2 px-4 shadow-md" id="mobile-menu">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-green-600">Home</a>
+            <a href="#products" class="block py-2 text-gray-700 hover:text-green-600">Products</a>
+            <a href="#benefits" class="block py-2 text-gray-700 hover:text-green-600">Benefits</a>
+            <a href="#blog" class="block py-2 text-gray-700 hover:text-green-600">Blog</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-green-600">About Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Grow Fresh Microgreens at Home</h2>
+                <p class="text-xl mb-8">Our DIY kits make it easy to cultivate nutritious microgreens right in your kitchen. Fresh, organic, and packed with nutrients!</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#products" class="bg-white text-green-700 hover:bg-gray-100 px-6 py-3 rounded-full font-semibold text-center transition duration-300">Shop Kits</a>
+                    <a href="#benefits" class="border-2 border-white text-white hover:bg-white hover:text-green-700 px-6 py-3 rounded-full font-semibold text-center transition duration-300">Learn Benefits</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <img src="https://images.unsplash.com/photo-1603048719539-04d7a8cc4a15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Microgreens growing kit" class="rounded-lg shadow-xl w-full max-w-md mx-auto floating-button">
+                <div class="absolute -bottom-5 -right-5 bg-yellow-400 text-gray-800 px-4 py-2 rounded-full shadow-lg font-bold hidden md:block">
+                    Made in Varna
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Microgreens Kits</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Everything you need to start growing your own superfood at home. Choose the perfect kit for your needs.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1603569283842-7a05faa6b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Starter Kit" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            BESTSELLER
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Starter Kit</h3>
+                        <p class="text-gray-600 mb-4">Perfect for beginners. Includes everything to grow your first batch of microgreens.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-700">49.99 лв</span>
+                            <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1603048719539-04d7a8cc4a15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Family Kit" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            MOST POPULAR
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Family Kit</h3>
+                        <p class="text-gray-600 mb-4">Larger capacity for families. Grow multiple varieties simultaneously.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-700">79.99 лв</span>
+                            <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1603048619449-a331d7a3a224?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Deluxe Kit" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            PREMIUM
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Deluxe Kit</h3>
+                        <p class="text-gray-600 mb-4">Our premium kit with all accessories for professional-level growing.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-700">129.99 лв</span>
+                            <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-6 py-3 rounded-full font-semibold transition duration-300">
+                    View All Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-16 bg-green-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Why Grow Microgreens?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover the incredible benefits of incorporating microgreens into your diet and lifestyle.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Benefit 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-heartbeat text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Nutrition Powerhouse</h3>
+                    <p class="text-gray-600">Microgreens contain up to 40x more nutrients than their mature counterparts. Packed with vitamins, minerals, and antioxidants.</p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-home text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Grow Anywhere</h3>
+                    <p class="text-gray-600">Our kits allow you to grow fresh greens year-round, even in small apartments. No garden or special equipment needed.</p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-leaf text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Fast & Easy</h3>
+                    <p class="text-gray-600">Harvest in just 7-14 days! Our simple system makes growing microgreens effortless for everyone.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1603569283842-7a05faa6b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Microgreens benefits" class="w-full h-full object-cover">
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Health Benefits of Microgreens</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Rich in antioxidants that help fight free radicals</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">High concentration of vitamins C, E, and K</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Support heart health and reduce cholesterol</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">May help reduce risk of chronic diseases</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Support healthy digestion and gut microbiome</span>
+                            </li>
+                        </ul>
+                        <button class="mt-6 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-semibold transition duration-300">
+                            Learn More About Benefits
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">How Our Kits Work</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Simple steps to fresh, homegrown microgreens</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="bg-green-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <span class="text-green-700 text-2xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Prepare</h3>
+                    <p class="text-gray-600">Set up your growing tray with the included substrate</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="bg-green-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <span class="text-green-700 text-2xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Sow</h3>
+                    <p class="text-gray-600">Evenly spread the seeds and lightly cover with soil</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="bg-green-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <span class="text-green-700 text-2xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Water</h3>
+                    <p class="text-gray-600">Mist daily to keep the soil moist but not soggy</p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div class="bg-green-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <span class="text-green-700 text-2xl font-bold">4</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Harvest</h3>
+                    <p class="text-gray-600">Cut your greens in 7-14 days when they're 2-3 inches tall</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-green-600 rounded-lg overflow-hidden">
+                <div class="md:flex items-center">
+                    <div class="md:w-1/2 p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-4">Video Tutorial</h3>
+                        <p class="mb-6">Watch our step-by-step guide to setting up your microgreens kit and achieving the best results.</p>
+                        <button class="bg-white text-green-600 hover:bg-gray-100 px-6 py-3 rounded-full font-semibold transition duration-300">
+                            <i class="fas fa-play mr-2"></i> Watch Tutorial
+                        </button>
+                    </div>
+                    <div class="md:w-1/2 relative">
+                        <img src="https://images.unsplash.com/photo-1603569283842-7a05faa6b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Video tutorial placeholder" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-white bg-opacity-80 rounded-full p-5 cursor-pointer">
+                                <i class="fas fa-play text-green-600 text-3xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-green-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">What Our Customers Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear from people who are enjoying fresh microgreens from our kits</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Maria K." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Maria K.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"I was skeptical at first, but the starter kit made it so easy! Now I have fresh greens all the time. The taste is incredible compared to store-bought."</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Ivan P." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Ivan P.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"As a busy professional in Varna, I love having fresh, healthy food at home without the hassle. The family kit provides enough for my whole household."</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Elena S." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Elena S.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"My kids actually eat vegetables now! They love watching the microgreens grow and helping with the harvest. Educational and nutritious."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Healthy Living Blog</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Tips, recipes, and insights for a healthier lifestyle with microgreens</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="blog-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Microgreens in meals" class="w-full h-full object-cover blog-image transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span>June 15, 2023</span>
+                            <span class="mx-2">•</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">5 Creative Ways to Add Microgreens to Your Meals</h3>
+                        <p class="text-gray-600 mb-4">Discover simple yet delicious ways to incorporate microgreens into your daily diet for maximum nutrition and flavor.</p>
+                        <a href="#" class="text-green-600 font-medium hover:text-green-700 inline-flex items-center">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="blog-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80" alt="Microgreens comparison" class="w-full h-full object-cover blog-image transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span>May 28, 2023</span>
+                            <span class="mx-2">•</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Microgreens vs. Sprouts: What's the Difference?</h3>
+                        <p class="text-gray-600 mb-4">Learn the key differences between these two superfoods and why microgreens often come out on top in nutritional value.</p>
+                        <a href="#" class="text-green-600 font-medium hover:text-green-700 inline-flex items-center">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="blog-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1512621776951-ab57162f378d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="Urban gardening" class="w-full h-full object-cover blog-image transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span>April 10, 2023</span>
+                            <span class="mx-2">•</span>
+                            <span>9 min read</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Urban Gardening in Varna: Growing Food in Small Spaces</h3>
+                        <p class="text-gray-600 mb-4">How Varna residents are transforming their balconies and kitchens into productive gardens with microgreens leading the way.</p>
+                        <a href="#" class="text-green-600 font-medium hover:text-green-700 inline-flex items-center">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-6 py-3 rounded-full font-semibold transition duration-300">
+                    View All Blog Posts
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="py-16 bg-green-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold mb-6">Our Story</h2>
+                    <p class="mb-4">Dimiana was founded in Varna, Bulgaria with a simple mission: to make fresh, nutritious food accessible to everyone, regardless of their living situation or gardening experience.</p>
+                    <p class="mb-6">What started as a small project in our apartment has grown into a movement helping hundreds of Bulgarians take control of their nutrition through homegrown microgreens.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-white text-green-600 hover:bg-gray-100 px-6 py-3 rounded-full font-semibold transition duration-300">
+                            Meet the Team
+                        </a>
+                        <a href="#" class="border-2 border-white hover:bg-white hover:text-green-600 px-6 py-3 rounded-full font-semibold transition duration-300">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white bg-opacity-20 rounded-lg p-8 backdrop-blur-sm">
+                        <h3 class="text-2xl font-bold mb-4">Visit Our Shop in Varna</h3>
+                        <div class="mb-6">
+                            <p class="mb-2"><i class="fas fa-map-marker-alt mr-3"></i> 123 Green Street, Varna 9000</p>
+                            <p class="mb-2"><i class="fas fa-phone mr-3"></i> +359 888 123 456</p>
+                            <p><i class="fas fa-envelope mr-3"></i> hello@dimiana.bg</p>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Opening Hours</h4>
+                        <ul class="space-y-2">
+                            <li class="flex justify-between">
+                                <span>Monday - Friday</span>
+                                <span>9:00 - 18:00</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Saturday</span>
+                                <span>10:00 - 15:00</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Sunday</span>
+                                <span>Closed</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="bg-green-50 rounded-xl p-8 md:p-12 text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Join Our Green Community</h2>
+                <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Subscribe to our newsletter for growing tips, exclusive offers, and healthy living inspiration.</p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-semibold transition duration-300">
+                        Subscribe
+                    </button>
+                </form>
+                <p class="text-xs text-gray-500 mt-4">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-leaf text-2xl text-green-500 mr-2"></i>
+                        <h3 class="text-xl font-bold text-white">Dimiana</h3>
+                    </div>
+                    <p class="mb-4">Bringing fresh, homegrown nutrition to Varna and beyond through our innovative microgreens kits.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#products" class="hover:text-white transition duration-300">Products</a></li>
+                        <li><a href="#benefits" class="hover:text-white transition duration-300">Benefits</a></li>
+                        <li><a href="#blog" class="hover:text-white transition duration-300">Blog</a></li>
+                        <li><a href="#about" class="hover:text-white transition duration-300">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition duration-300">FAQs</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Shipping Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Returns & Refunds</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>123 Green Street, Varna 9000, Bulgaria</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3"></i>
+                            <span>+359 888 123 456</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>hello@dimiana.bg</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p>&copy; 2023 Dimiana Microgreens. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <div class="fixed bottom-8 right-8 z-50">
+        <a href="#" class="bg-green-600 hover:bg-green-700 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition duration-300">
+            <i class="fas fa-shopping-cart text-xl"></i>
+            <span class="absolute -top-1 -right-1 bg-yellow-400 text-gray-800 text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">3</span>
+        </a>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Simple cart functionality (would be expanded in a real implementation)
+        const addToCartButtons = document.querySelectorAll('button:contains("Add to Cart")');
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const cartCount = document.querySelector('.fixed .absolute');
+                let count = parseInt(cartCount.textContent);
+                cartCount.textContent = count + 1;
+                
+                // Show a simple notification
+                const notification = document.createElement('div');
+                notification.className = 'fixed top-20 right-8 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg z-50 animate-fade-in-out';
+                notification.textContent = 'Added to cart!';
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.remove();
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
